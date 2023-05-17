@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import api from '../services/api';
 import { CanceledError } from 'axios';
 
-interface ResultGame {
+export interface Game {
     id: number;
     slug: string;
     name: string;
@@ -27,11 +27,11 @@ interface ResultGame {
     count: number;
     next: string;
     previous: string;
-    results: ResultGame[];
+    results: Game[];
   }
 
 const useGames = () => {
-    const [games, setGames] = useState<ResultGame[]>([]);
+    const [games, setGames] = useState<Game[]>([]);
     const [error, setError] = useState("");
   
     useEffect(() => {
