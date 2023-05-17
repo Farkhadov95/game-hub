@@ -20,7 +20,15 @@ export interface Game {
     suggestions_count: number;
     updated: string;
     esrb_rating: {};
-    platforms: [{}];
+    platforms: {platform: Platform}[];
+  }
+
+  export interface Platform {
+    id: number;
+    name: string;
+    slug: string;
+    image_background: string;
+
   }
   
   interface FetchGames {
