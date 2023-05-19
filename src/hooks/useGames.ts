@@ -26,13 +26,12 @@ export interface Platform {
 id: number;
 name: string;
 slug: string;
-image_background: string;
 }
 
-const useGames = (currentGenre: Genre | null) => useData<Game>(
+const useGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null) => useData<Game>(
   "/games",
-  {params: {genres: currentGenre?.id}},
-  [currentGenre?.id]
+  {params: {genres: selectedGenre?.id, platforms: selectedPlatform?.id}},
+  [selectedGenre?.id, selectedPlatform?.id]
 );
 
 export default useGames
