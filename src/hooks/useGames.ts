@@ -1,4 +1,5 @@
 import useData from './useData';
+import { Genre } from './useGenres';
 
 export interface Game {
     id: number;
@@ -28,6 +29,10 @@ slug: string;
 image_background: string;
 }
 
-const useGames = () => useData<Game>("/games");
+const useGames = (currentGenre: Genre | null) => useData<Game>(
+  "/games",
+  {params: {genres: currentGenre?.id}},
+  [currentGenre?.id]
+);
 
 export default useGames
