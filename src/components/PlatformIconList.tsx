@@ -20,18 +20,13 @@ interface PlatformIconListProps {
 const PlatformIconList = ({ platforms }: PlatformIconListProps) => {
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
-    playstation5: FaPlaystation,
-    playstation4: FaPlaystation,
-    playstation3: FaPlaystation,
+    playstation: FaPlaystation,
     xbox: FaXbox,
-    xbox360: FaXbox,
-    "xbox-series-x": FaXbox,
-    "xbox-one": FaXbox,
     ios: FaApple,
-    macos: FaApple,
+    mac: FaApple,
     linux: FaLinux,
     android: FaAndroid,
-    "nintendo-switch": SiNintendo,
+    nintendo: SiNintendo,
     web: BsGlobe,
     iphone: MdPhoneIphone,
   };

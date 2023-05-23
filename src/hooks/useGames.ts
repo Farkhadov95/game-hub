@@ -20,7 +20,7 @@ export interface Game {
   suggestions_count: number;
   updated: string;
   esrb_rating: {};
-  platforms: {platform: Platform}[];
+  parent_platforms: {platform: Platform}[];
 }
 
 export interface Platform {
