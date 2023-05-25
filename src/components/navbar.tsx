@@ -9,11 +9,13 @@ interface searchInputProps {
 
 const NavBar = ({ onSearch }: searchInputProps) => {
   return (
-    <HStack padding="10px">
-      <Image src={logo} alt="logo" boxSize="60px" />
-      <SearchInput onSearch={onSearch} />
-      <ColorModeSwitch />
-    </HStack>
+    <>
+      <HStack padding="10px">
+        <Image src={logo} alt="logo" boxSize="60px" />
+        <SearchInput onSearch={onSearch} />
+        <ColorModeSwitch />
+      </HStack>
+    </>
   );
 };
 
