@@ -1,8 +1,8 @@
 import { Platform } from '../hooks/useGames';
-import { Genre } from './Genre';
-import { Publisher } from './Publishers';
+import Genre from './Genre';
+import Publisher from './Publishers';
 
-export interface Game {
+export default interface Game {
   id: number;
   slug: string;
   name: string;
